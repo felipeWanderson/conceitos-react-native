@@ -17,7 +17,6 @@ export default function App() {
 
   useEffect(() => {
     api.get("repositories").then((response) => {
-      console.log(response.data);
       setRepositories(response.data);
     });
   }, []);
@@ -32,7 +31,6 @@ export default function App() {
         return repository;
       }
     });
-    console.log(repositoryUpdated)
     setRepositories(repositoryUpdated);  
   }
 
